@@ -1,5 +1,8 @@
 const paths = window.location.pathname.split('/');
-const pagePath = paths[paths.length - 1];
+let pagePath = paths[paths.length - 1];
+if (!pagePath.includes('.html')) {
+  pagePath = 'index.html';
+}
 const page = pagePath.split('.')[0];
 
 const lis = document.querySelectorAll('nav ul li');
