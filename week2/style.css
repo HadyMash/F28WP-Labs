@@ -43,8 +43,8 @@ nav li {
   display: inline-block;
 }
 
-nav li .current {
-  color: #fff !important;
+a .current {
+  background-color: #3d3d3d !important;
   font-weight: bold;
 }
 
