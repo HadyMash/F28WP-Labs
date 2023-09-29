@@ -13,4 +13,17 @@ document.addEventListener('DOMContentLoaded', function () {
       nav.childNodes[0].classList.add('current');
     }
   });
+
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    const header = document.querySelector('header');
+
+    if (window.scrollY > 77) {
+      header.style.marginBottom = `${nav.offsetHeight}px`;
+      nav.classList.add('sticky');
+    } else {
+      nav.classList.remove('sticky');
+      header.style.marginBottom = '0';
+    }
+  });
 });
