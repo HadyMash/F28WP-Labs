@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // show previous slide
-  function prev() {
+  function prev(e) {
+    e.preventDefault();
     // check edge case of first slide
     if (slideIndex === 0) {
       slideIndex = slides.length - 1;
@@ -37,7 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // show next slide
-  function next() {
+  function next(e) {
+    e.preventDefault();
     // check edge case of last slide
     if (slideIndex === slides.length - 1) {
       slideIndex = 0;
