@@ -301,10 +301,13 @@ block-level display, font size, padding, full width */
         if (passwordValue === '') {
           setErrorFor('password', 'Password cannot be blank');
           valid = false;
+        } else if (passwordValue.length < 8) {
+          setErrorFor('password', 'Password must be at least 8 characters');
+          valid = false;
         } else if (!isValidPassword(passwordValue)) {
           setErrorFor(
             'password',
-            'Password must be at least 8 characters long'
+            'Password must contain a special character, a number, and a capital letter'
           );
           valid = false;
         } else {
