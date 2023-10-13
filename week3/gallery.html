@@ -261,7 +261,9 @@ block-level display, font size, padding, full width */
         }
 
         const isEmail = (email) => {
-          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+          return /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/.test(
+            email
+          );
         };
 
         // Password must be at least 8 characters long, have a number, and a special character, and 1 capital letter
