@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gallery - Wanderlust Voyages</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .slideshow-container {
+        position: relative;
+      }
+
+      .slide {
+        display: none;
+      }
+
+      .active-slide {
+        display: block;
+      }
+
+      .cursor {
+        cursor: pointer;
+      }
+
+      .slide img {
+        vertical-align: middle;
+        width: 100%;
+      }
+
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 40%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      /* Number text (1/3 etc) */
+      .slide-number {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div>
+      <header>
+        <h1 class="headeraH1">Wanderlust Voyages | Travel Agency</h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="tasks.html">Tasks</a></li>
+        </ul>
+      </nav>
+
+      <main class="services">
+        <h1>Gallery</h1>
+
+        <div class="slideshow-container">
+          <a href="" class="prev"></a>
+          <div class="slides">
+            <div class="slide">
+              <img src="images/1.jpeg" alt="Spa Image 1" />
+            </div>
+            <div class="slide">
+              <img src="images/2.jpeg" alt="Spa Image 1" />
+              <div class="slide-number"></div>
+            </div>
+            <div class="slide">
+              <img src="images/3.jpeg" alt="Spa Image 1" />
+              <div class="slide-number"></div>
+            </div>
+            <div class="slide">
+              <img src="images/4.jpeg" alt="Spa Image 1" />
+              <div class="slide-number"></div>
+            </div>
+            <div class="slide">
+              <img src="images/5.jpeg" alt="Spa Image 1" />
+              <div class="slide-number"></div>
+            </div>
+            <div class="slide">
+              <img src="images/6.jpeg" alt="Spa Image 1" />
+              <div class="slide-number"></div>
+            </div>
+            <div class="slide">
+              <img src="images/7.jpeg" alt="Spa Image 1" />
+              <div class="slide-number"></div>
+            </div>
+            <div class="slide">
+              <img src="images/8.jpeg" alt="Spa Image 1" />
+              <div class="slide-number"></div>
+            </div>
+          </div>
+          <a href="" class="next"></a>
+        </div>
+        <!-- Call to Action -->
+        <section class="cta-container">
+          <h2>Ready to Experience Our Services?</h2>
+          <p>Join us today and discover the difference we can make for you!</p>
+          <a href="contact.html" class="cta-button">Contact Us Now</a>
+        </section>
+      </main>
+      <footer>
+        <ul>
+          <li><a href="https://www.facebook.com/">Facebook</a></li>
+          <li><a href="https://twitter.com/">Twitter</a></li>
+          <li><a href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+        <p>
+          &copy; 2024 Wanderlust Voyages | Travel Agency. All rights reserved.
+        </p>
+      </footer>
+    </div>
+    <script type="text/javascript" src="nav.js"></script>
+    <script type="text/javascript" src="slideshow.js"></script>
+  </body>
+</html>
