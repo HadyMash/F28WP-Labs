@@ -50,7 +50,7 @@
         border-radius: 0 3px 3px 0;
         -webkit-user-select: none;
         user-select: none;
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.25s ease;
       }
 
       /* Position the "next button" to the right */
@@ -63,6 +63,16 @@
       .prev:hover,
       .next:hover {
         background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .prev a,
+      .next a {
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.25s ease;
+      }
+
+      .prev:hover a,
+      .next:hover a {
         box-shadow: none;
       }
 
