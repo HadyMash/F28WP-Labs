@@ -50,6 +50,7 @@
         border-radius: 0 3px 3px 0;
         -webkit-user-select: none;
         user-select: none;
+        background-color: rgba(0, 0, 0, 0.15);
         transition: background-color 0.25s ease;
       }
 
@@ -63,30 +64,11 @@
       .prev:hover,
       .next:hover {
         background-color: rgba(0, 0, 0, 0.8);
-        box-shadow: none;
       }
 
       .prev svg,
       .next svg {
         fill: white;
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-        transition: box-shadow 0.25s ease;
-      }
-
-      .prev:hover svg,
-      .next:hover svg {
-        box-shadow: none;
-      }
-
-      .prev a,
-      .next a {
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-        transition: box-shadow 0.25s ease;
-      }
-
-      .prev:hover a,
-      .next:hover a {
-        box-shadow: none;
       }
 
       /* Number text (1/3 etc) */
@@ -198,7 +180,7 @@
       </footer>
     </div>
     <script type="text/javascript" src="nav.js"></script>
+    <script type="text/javascript" src="cta.js"></script>
     <script type="text/javascript" src="slideshow.js"></script>
-    <script src="cta.js"></script>
   </body>
 </html>
