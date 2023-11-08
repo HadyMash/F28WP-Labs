@@ -2,7 +2,10 @@ var cityContainer = document.getElementById('city-info');
 var btn = document.getElementById('btn');
 btn.addEventListener('click', function () {
   var ourRequest = new XMLHttpRequest();
-  ourRequest.open('GET', 'https://hadymash.github.io/F28WP-Labs/cities1.json');
+  ourRequest.open(
+    'GET',
+    'https://hadymash.github.io/F28WP-Labs/week4/cities1.json'
+  );
   ourRequest.onload = function () {
     var ourData = JSON.parse(ourRequest.responseText);
     console.log(ourData);
