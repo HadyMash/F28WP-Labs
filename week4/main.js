@@ -9,7 +9,7 @@ btn.addEventListener('click', function () {
   ourRequest.onload = function () {
     var ourData = JSON.parse(ourRequest.responseText);
     console.log(ourData);
-    renderHTML(ourData);
+    renderHTML(ourData.cities);
     btn.classList.add('hide-me');
   };
   ourRequest.send();
