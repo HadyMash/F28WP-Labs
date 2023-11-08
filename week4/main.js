@@ -42,5 +42,6 @@ function renderHTML(data) {
     }
     htmlString += '.</p>';
   }
+  console.log(htmlString);
   cityContainer.insertAdjacentHTML('beforeend', htmlString);
 }
