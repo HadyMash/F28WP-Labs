@@ -1,0 +1,35 @@
+<nav>
+  <h1>User Authentication System With Node and Mysql</h1>
+  <ul>
+    <li><a href='/'>Home</a></li>
+  </ul>
+</nav>
+<div class='container-sm mt-4'>
+  {{#if message}}
+    <h5 class='alert alert-danger mt-4 mb-2'>
+      {{message}}
+    </h5>
+  {{/if}}
+  <form action='/auth/login' method='POST'>
+    <div class='mb-3'>
+      <label for='email' class='form-label'>Email address</label>
+      <input
+        type='email'
+        class='form-control'
+        id='email'
+        name='email'
+        aria-describedby='emailHelp'
+      />
+    </div>
+    <div class='mb-3'>
+      <label for='password' class='form-label'>Password</label>
+      <input
+        type='password'
+        class='form-control'
+        id='password'
+        name='password'
+      />
+    </div>
+    <button type='submit' class='btn btn-primary'>Submit</button>
+  </form>
+</div>
