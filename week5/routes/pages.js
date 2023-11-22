@@ -17,18 +17,9 @@ router.get('/login', verifyUnauthenticated, (req, res) => {
 });
 
 router.get('/profile', verifyJWTCookie, (req, res) => {
-  try {
-    if (!req.cookies.token) throw new Error('No token found');
-    const decoded = jwt.verify(req.cookies.token, process.env.JWT_SECRET);
-    res.render('profile', {
-      user: {
-        name: decoded.username,
-      },
-    });
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('Internal server error');
-  }
+  res.render('profile', {
+    user: req.user,
+  });
 });
 
 const pages = router;

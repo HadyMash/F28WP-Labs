@@ -1,8 +1,6 @@
 <nav>
   <h1>User Authentication System With Node and Mysql</h1>
   <ul>
-    <li><a href='/'>Home</a></li>
-    <li><a href='/profile'>Profile</a></li>
     <li><a href='/' id='logout'>Logout</a></li>
   </ul>
 </nav>
@@ -30,6 +28,31 @@
           <p class='card-text'>This is your profile page where you can add all
             the information about yourself</p>
           <a href='#' class='btn btn-primary'>Go Somewhere</a>
+        </div>
+        <div class='mt-4'>
+          <h1>{{user.name}}'s Profile</h1>
+          <table class='table w-100'>
+            <thead>
+              <tr class='text-center'>
+                <th scope='col'>Attribute</th>
+                <th scope='col'>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class='text-center'>
+                <th scope='row'>ID</th>
+                <td>{{user.id}}</td>
+              </tr>
+              <tr class='text-center'>
+                <th scope='row'>Name</th>
+                <td>{{user.name}}</td>
+              </tr>
+              <tr class='text-center'>
+                <th scope='row'>Email</th>
+                <td>{{user.email}}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div class='card-footer text-muted'>
           Node MySQL - Project

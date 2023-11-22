@@ -1,9 +1,21 @@
 import jwt from 'jsonwebtoken';
+import { userExists } from '../controllers/db.js';
 
-export function verifyJWTCookie(req, res, next) {
+export async function verifyJWTCookie(req, res, next) {
   try {
+    // check token exists
     if (!req.cookies.token) throw new Error();
-    jwt.verify(req.cookies.token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(req.cookies.token, process.env.JWT_SECRET);
+
+    // check if user exists
+    const existingUser = await userExists(decoded.email);
+    if (!existingUser) throw new Error();
+
+    req.user = {
+      id: decoded.id,
+      name: decoded.name,
+      email: decoded.email,
+    };
     next();
   } catch (_) {
     res.clearCookie('token');
