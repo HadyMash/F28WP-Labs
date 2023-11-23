@@ -62,7 +62,7 @@
   </div>
 </div>
 <script>
-  document.getElementById('logout').onclick = async function(e) {const response
-  = await fetch('auth/logout', { method: 'POST', headers: {'Content-Type':
-  'application/json'}, }); console.log(response); }
+  document.title = 'Profile'; document.getElementById('logout').onclick = async
+  function(e) {const response = await fetch('auth/logout', { method: 'POST',
+  headers: {'Content-Type': 'application/json'}, }); console.log(response); }
 </script>
